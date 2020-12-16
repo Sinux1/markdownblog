@@ -1,0 +1,28 @@
+{
+  "name": "markdownblog",
+  "version": "1.0.0",
+  "description": "Markdown blog tutorial from youtube   `https://www.youtube.com/watch?v=1NrHkjlWVhM&list=LL&index=1&t=116s`",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinux1/markdownblog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sinux1/markdownblog/issues"
+  },
+  "homepage": "https://github.com/Sinux1/markdownblog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mogoose": "0.0.1-security"
+  }
+}
