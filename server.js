@@ -5,15 +5,14 @@ const app = express()
 app.set('view engine', 'ejs')
 
 app.use('/articles', articleRouter)
+// The following "Articles" are iterated over in index.ejs
+app.get('/', (req, res) => {
+	const articles = [{
+		title: 'Test Article',
+		createdAt: new Date(),
+		description: 'Test Description'
 
-app.get('/', (req, res) =>{
-    const articles = [{
-        title: 'Test Article',
-        createdAt: Date.now(),
-        description: 'Test Description'
-
-    }]
-    res.render('index', {articles: articles})
+	}]
+	res.render('index', { articles: articles })
 })
-
 app.listen(5000)
