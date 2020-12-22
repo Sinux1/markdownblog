@@ -6,7 +6,6 @@ router.get('/new', (req, res) =>{
 })
 
 router.post('/', (req, res) =>{
-  
 
 })
 
