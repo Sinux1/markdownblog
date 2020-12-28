@@ -8,8 +8,9 @@ mongoose.connect('mongodb://localhost/blog', {
 })
 
 app.set('view engine', 'ejs')
+app.use(express.urlencoded({ extended: false }))
 
-app.use('/articles', articleRouter)
+
 // The following "Articles" are iterated over in index.ejs
 app.get('/', (req, res) => {
   const articles = [{
@@ -26,4 +27,8 @@ app.get('/', (req, res) => {
   }]
   res.render('articles/index', { articles: articles })
 })
+
+
+app.use('/articles', articleRouter)
+
 app.listen(5000)
