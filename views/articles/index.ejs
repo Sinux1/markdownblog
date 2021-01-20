@@ -13,7 +13,8 @@
   <div class="container">
     <h1 class="mb-4">Blog Articles</h1>
     <a href="/articles/new" class="btn btn-success">New Article</a>
-
+    <!-- articles is passed from server.js and is a list of 
+      all the saved articles from the database -->
     <% articles.forEach(article => { %>
       <div class="card mt-4">
         <div class="card-body">
@@ -24,7 +25,10 @@
             <%= article.createdAt.toLocaleDateString() %>
           </div>
           <div class="card-text mb-2"><%= article.description %></div>
-      </div>
+          <!-- show button for each article-->
+          <a href="articles/<%= article.id %>" 
+            class="btn btn-primary"> Read More</a>
+        </div>
     </div> 
     <% }) %>
   </div>

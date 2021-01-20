@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const app = express()
 
@@ -11,20 +12,13 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 
 
-// The following "Articles" are iterated over in index.ejs
-app.get('/', (req, res) => {
-  const articles = [{
-    title: 'Test Article1',
-    createdAt: new Date(),
-    description: 'Test Description 1'
-
-  },
-  {
-    title: 'Test Article2',
-    createdAt: new Date(),
-    description: 'Test Description 2'
-
-  }]
+app.get('/', async (req, res) => {
+  // articles is a list of all articles in database, sorted in descending 
+  // order of when saved
+  const articles = await Article.find().sort({
+    createdAt: 'desc'
+  })
+  // The index page is 'called' and articles is passed to it
   res.render('articles/index', { articles: articles })
 })
 
