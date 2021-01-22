@@ -1,5 +1,5 @@
 # markdownblog
-_This branch is for pulling and changes from the working branch and testing prior to pulling into the mina branch_  _  
+_This branch is for pulling changes from the working branch and testing prior to pulling into the mina branch_  _  
 
 Markdown blog tutorial from youtube  
 use npm to install:  
