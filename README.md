@@ -1,4 +1,6 @@
 # markdownblog
+_This branch is for pulling and changes from the working branch and testing prior to pulling into the mina branch_  _  
+
 Markdown blog tutorial from youtube  
 use npm to install:  
 `slugify nodemon mongoose method-override marked jsdom express ejs dompurify`  
