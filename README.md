@@ -2,7 +2,7 @@
 Markdown blog tutorial from youtube  
 use npm to install:  
 `slugify  mongoose method-override marked jsdom express ejs dompurify`  
-Install `nodemonm` like this:  
+Install `nodemon` like this:  
 `npm i --save-dev nodemon`  
 _--save-dev means "needed only when developing"_   
 `https://www.youtube.com/watch?v=1NrHkjlWVhM&list=LL&index=1&t=116s`  
