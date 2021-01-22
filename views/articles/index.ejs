@@ -27,6 +27,7 @@
           <div class="card-text mb-2"><%= article.description %></div>
           <!-- show button for each article-->
           <a href="articles/<%= article.slug %>" class="btn btn-primary"> Read More</a>
+          
           <form action="/articles/<%= article.id %>?_method=DELETE" class="d-inline" method="POST"><button type="submit" class="btn btn-danger">Delete</button>
             </form>
         </div>
